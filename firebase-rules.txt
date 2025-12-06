@@ -1,0 +1,20 @@
+
+// Realtime Database rules (example). Replace project-specific checks as needed.
+{
+  "rules": {
+    "users": {
+      "$user": {
+        ".read": true,
+        ".write": "auth != null && (auth.token.email === 'ryyxiaoyan@gmail.com' || auth.token.email === 'rafkaikhwansyah0@gmail.com')"
+      }
+    },
+    "chat": {
+      ".read": true,
+      ".write": "auth != null && root.child('users').child(auth.token.email.replace('.','_')).child('role').val() != 'banned'"
+    },
+    "online": {
+      ".read": true,
+      ".write": "auth != null"
+    }
+  }
+}

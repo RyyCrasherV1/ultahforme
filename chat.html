@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chat Room - ReyyXPloiter</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+<!-- Chat container -->
+<div class="chat-wrapper">
+  <aside class="chat-panel-left">
+    <h2>Live Chat</h2>
+    <div id="liveIndicator" class="live-indicator">● LIVE</div>
+
+    <div id="userStatus" class="user-status">
+      <button id="btnSignIn" class="btn">Sign in with Google</button>
+      <button id="btnSignOut" class="btn" style="display:none">Sign out</button>
+      <div id="signedAs" style="margin-top:8px;color:#0f0"></div>
+    </div>
+
+    <div id="onlineListContainer" class="online-list">
+      <h3>Online</h3>
+      <ul id="onlineList"></ul>
+    </div>
+  </aside>
+
+  <main class="chat-main">
+    <div id="chatBox" class="chat-box" aria-live="polite"></div>
+
+    <div class="chat-input-area">
+      <input id="msgInput" type="text" placeholder="Ketik pesan..." />
+      <button id="sendBtn" class="btn">Kirim</button>
+    </div>
+  </main>
+
+  <aside class="chat-panel-right" id="adminPanel" style="display:none;">
+    <h3>Moderator / Owner Panel</h3>
+    <div id="roleTools">
+      <input id="targetEmail" placeholder="user@example.com" style="width:100%;padding:6px;margin-bottom:8px"/>
+      <div style="display:flex;gap:6px;margin-bottom:8px">
+        <button onclick="setUserRoleFromInput('owner')" class="btn small">Make Owner</button>
+        <button onclick="setUserRoleFromInput('admin')" class="btn small">Make Admin</button>
+        <button onclick="setUserRoleFromInput('moderator')" class="btn small">Make Mod</button>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:8px">
+        <button onclick="setUserRoleFromInput('vip')" class="btn small">VIP</button>
+        <button onclick="setUserRoleFromInput('member')" class="btn small">Member</button>
+        <button onclick="setUserRoleFromInput('muted')" class="btn small">Mute</button>
+      </div>
+      <div style="display:flex;gap:6px;margin-bottom:8px">
+        <button onclick="setUserRoleFromInput('banned')" class="btn small danger">Ban</button>
+        <button onclick="setUserRoleFromInput('unban')" class="btn small">Unban</button>
+      </div>
+      <hr/>
+      <div id="recentActions"></div>
+    </div>
+  </aside>
+</div>
+
+<script type="module" src="js/chat_v2.js"></script>
+
+<!-- FLOATING SIDE MENU -->
+<div class="side-menu-container">
+    <div class="side-main-btn" onclick="toggleSideMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="side-menu" id="sideMenu">
+        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="about.html"><i class="fa-solid fa-user"></i></a>
+        <a href="skill.html"><i class="fa-solid fa-bolt"></i></a>
+        <a href="service.html"><i class="fa-solid fa-briefcase"></i></a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i></a>
+        <a href="chat.html"><i class="fa-solid fa-comments"></i></a>
+    </div>
+</div>
+
+<script src="js/birthday.js"></script>
+</body>
+</html>
