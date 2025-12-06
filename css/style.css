@@ -1,0 +1,134 @@
+/* ======= FIX SCROLL ======= */
+body {
+    width: 100%;
+    height: auto;          /* auto biar bisa panjang */
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;    /* hanya horizontal yang disembunyikan */
+    overflow-y: auto;      /* vertical scroll aktif */
+    margin: 0;
+    padding: 0;
+}
+
+/* HOME SECTION FIXED */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px 5% 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* PROFILE IMAGE FIXED */
+.image {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(0, 255, 0, 0.6);
+    box-shadow: 0 0 25px #00ff00;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HAMBURGER FIXED */
+.dropdown {
+    transform: translateY(-500px);
+    transition: 0.4s ease;
+}
+/* === FLOATING SIDE MENU === */
+.side-menu-container {
+    position: fixed;
+    right: 25px;
+    bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+.side-main-btn {
+    width: 60px;
+    height: 60px;
+    background: #00ff88;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00ff88;
+    transition: 0.3s;
+}
+.side-main-btn i {
+    font-size: 26px;
+    color: #000;
+}
+.side-menu {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    transform: translateX(120px);
+    pointer-events: none;
+    transition: 0.35s ease;
+}
+.side-menu.show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+}
+.side-menu a {
+    width: 55px;
+    height: 55px;
+    background: #0a0a0a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px #00ff88;
+    border: 2px solid #00ff88;
+    font-size: 22px;
+    color: #00ff88;
+    transition: 0.3s;
+}
+.side-menu a:hover {
+    background: #00ff88;
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+/* === BIRTHDAY BALLOON COUNTDOWN (Injected) === */
+.bday-container{position:fixed;left:20px;bottom:40px;z-index:99999;pointer-events:none;}
+.bday-main-balloon{position:relative;width:160px;height:200px;margin-bottom:10px;pointer-events:auto;}
+.bday-balloon{width:140px;height:160px;border-radius:70px;background:linear-gradient(180deg,#ff9ec6,#ff66b3);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#000;font-weight:700;box-shadow:0 8px 30px rgba(0,0,0,0.3);border:4px solid rgba(255,255,255,0.25);}
+.bday-count{font-size:14px;line-height:1;text-align:center;padding:6px;}
+.bday-sub{font-size:12px;opacity:0.85;margin-top:6px}
+.bday-string{font-size:13px;font-weight:800;color:#000;}
+.bday-decor{position:absolute;left:50%;transform:translateX(-50%);bottom:-36px;width:2px;height:36px;background:#6b6b6b;}
+.bday-decor::after{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:-14px;width:20px;height:20px;background:#fff;border-radius:50%;box-shadow:0 0 12px rgba(0,255,157,0.25);}
+/* decorative small balloons */
+.bday-decorative{position:fixed;left:20px;bottom:10px;pointer-events:none;z-index:99998}
+.bday-deco{position:absolute;width:38px;height:48px;border-radius:50%;background:linear-gradient(180deg,#ffd27a,#ff9e4a);box-shadow:0 6px 18px rgba(0,0,0,0.15);opacity:0.95}
+/* float animations */
+@keyframes floatUp { 0%{transform: translateY(0) } 100%{transform: translateY(-420px) } }
+@keyframes sway { 0%{transform: translateX(-6px)}50%{transform: translateX(6px)}100%{transform: translateX(-6px)} }
+.bday-deco{animation: floatUp 14s linear infinite, sway 4s ease-in-out infinite;}
+
+/* "Happy" overlay */
+.bday-happy{position:fixed;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);z-index:100000;flex-direction:column;color:#fff;font-family:Inter,Arial;border:0}
+.bday-happy h1{font-size:48px;margin:10px 0;text-shadow:0 4px 30px rgba(0,255,157,0.25)}
+.bday-happy p{font-size:20px;opacity:0.9}
+.bday-close{margin-top:16px;padding:8px 14px;border-radius:8px;background:#00ff88;color:#000;border:none;cursor:pointer}
+@media(max-width:720px){
+  .bday-container{left:10px;bottom:10px}
+  .bday-main-balloon{width:130px;height:170px}
+  .bday-balloon{width:120px;height:140px}
+}
