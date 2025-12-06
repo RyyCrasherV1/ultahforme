@@ -132,3 +132,16 @@ body {
   .bday-main-balloon{width:130px;height:170px}
   .bday-balloon{width:120px;height:140px}
 }
+#countdown-box {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #00ff80; }
+    to { text-shadow: 0 0 15px #00ff80; }
+}
+
+#balloon-container img:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+}
