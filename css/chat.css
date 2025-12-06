@@ -1,3 +1,4 @@
+
 /* chat.css - styles for chat v2 */
 .chat-wrapper{display:grid;grid-template-columns:260px 1fr 320px;gap:18px;padding:20px;}
 .chat-panel-left, .chat-panel-right{background:rgba(0,0,0,0.6);border:2px solid #00ff9d;padding:12px;border-radius:10px;color:#fff;height:calc(100vh - 80px);overflow:auto}
