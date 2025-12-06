@@ -1,11 +1,10 @@
-
 // Realtime Database rules (example). Replace project-specific checks as needed.
 {
   "rules": {
     "users": {
       "$user": {
         ".read": true,
-        ".write": "auth != null && (auth.token.email === 'ryyxiaoyan@gmail.com' || auth.token.email === 'rafkaikhwansyah0@gmail.com')"
+        ".write": "auth != null && (auth.token.email === 'ryyxiaoyan@gmail.com' || auth.token.email === 'rafkaikhwansyah0@gmail.com', 'youkaze1@gmail.com')"
       }
     },
     "chat": {
