@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReyyXPloiter Zhouu</title>
+    <title>ReyyXPloiter</title>
 
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/chat.css" />
 
@@ -14,90 +15,76 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <nav>
-            <h2 class="logo">ReyyXPloiter <span>Zhouu</span></h2>
+<!-- NAVBAR -->
+<header>
+    <nav>
+        <h2 class="logo">ReyyXPloiter <span>Reyy</span></h2>
 
-            <ul id="dropdown" class="dropdown">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="chat.html">Chat</a></li>
-            </ul>
+        <ul id="dropdown" class="dropdown">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="chat.html">Chat</a></li>
+        </ul>
 
-            <div class="hamburger" onclick="hamburg()">
-                <span></span><span></span><span></span>
-            </div>
-        </nav>
-    </header>
+        <div class="hamburger" onclick="hamburg()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</header>
 
-    <!-- HOME SECTION -->
-    <section class="home" id="home">
+<!-- HOME SECTION -->
+<section id="home" class="home">
+    <div class="content">
+        <h1>Hey I'm <span>ReyyXPloiter</span></h1>
+        <h2>I'm a <span class="typer"></span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-        <div class="image" data-aos="zoom-in" data-aos-duration="2000">
-            <img src="img/giphy.gif" alt="profile">
+        <div class="icons">
+            <a href="#"><img src="img/linked.png"></a>
+            <a href="#"><img src="img/github.png"></a>
+            <a href="#"><img src="img/fb.png"></a>
+            <a href="#"><img src="img/twt.png"></a>
         </div>
 
-        <div class="home-text" data-aos="fade-left" data-aos-duration="2000">
-            <h1>Hey I'm <span>ReyyXPloiter</span></h1>
-            <h2>I'm a <span id="typing"></span></h2>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Ut fuga officiis tempora sapiente quam doloremque. 
-                Ea accusamus delectus maxime porro tempore!
-            </p>
-
-            <div class="social">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-
-            <button class="btn"></button>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about" id="about">
-        <h1 data-aos="fade-up">About Me</h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Asperiores, dolore!
-        </p>
-    </section>
-
-    <!-- DOWNLOAD SECTION -->
-    <section class="download" id="download">
-        <h1 data-aos="fade-up">Download</h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-            Download my tools here.
-        </p>
-    </section>
-
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-
-
-<!-- FLOATING SIDE MENU -->
-<div class="side-menu-container">
-    <div class="side-main-btn" onclick="toggleSideMenu()">
-        <i class="fa-solid fa-bars"></i>
+        <a href="#download" class="btn">Download CV</a>
     </div>
 
-    <div class="side-menu" id="sideMenu">
-        <a href="index.html"><i class="fa-solid fa-house"></i></a>
-        <a href="about.html"><i class="fa-solid fa-user"></i></a>
-        <a href="skill.html"><i class="fa-solid fa-bolt"></i></a>
-        <a href="service.html"><i class="fa-solid fa-briefcase"></i></a>
-        <a href="contact.html"><i class="fa-solid fa-envelope"></i></a>
-        <a href="chat.html"><i class="fa-solid fa-comments"></i></a>
+    <!-- PROFILE IMAGE FIX -->
+    <div class="image">
+        <img src="img/profile.jpg" alt="profile">
     </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h2 data-aos="fade-up">About Me</h2>
+    <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</section>
+
+<!-- DOWNLOAD SECTION -->
+<section id="download" class="download">
+    <h2>Download Tools</h2>
+</section>
+
+<!-- 🎂 ULTAH BALLOON SYSTEM -->
+<div id="balloon-container"></div>
+
+<!-- Birthday Message Box -->
+<div id="bday-message" class="bday-happy" style="display:none;">
+    <h1>Happy Birthday <span>Reyy!</span></h1>
+    <p id="countdown-box"></p>
+    <button class="bday-close" onclick="closeBday()">Close</button>
 </div>
 
-<script src="js/birthday.js"></script>
+<!-- Scripts -->
+<script src="js/script.js" defer></script>
+<script src="js/birthday.js" defer></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>
