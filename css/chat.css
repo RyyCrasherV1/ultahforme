@@ -1,0 +1,27 @@
+/* chat.css - styles for chat v2 */
+.chat-wrapper{display:grid;grid-template-columns:260px 1fr 320px;gap:18px;padding:20px;}
+.chat-panel-left, .chat-panel-right{background:rgba(0,0,0,0.6);border:2px solid #00ff9d;padding:12px;border-radius:10px;color:#fff;height:calc(100vh - 80px);overflow:auto}
+.chat-main{display:flex;flex-direction:column;gap:12px}
+.live-indicator{color:#ff4d4d;font-weight:700;margin-top:6px}
+.user-status .btn{background:#00ff9d;border:none;padding:8px;border-radius:6px;cursor:pointer}
+.btn{background:#00ff9d;color:#000;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.btn.small{padding:6px 8px;font-size:13px}
+.btn.danger{background:#ff4d4d;color:#fff}
+.chat-box{height:calc(100vh - 240px);overflow:auto;padding:12px;border-radius:6px;background:linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6));border:1px solid rgba(0,255,157,0.08)}
+.msg{margin:8px 0;padding:10px;border-radius:8px;display:inline-block;max-width:80%}
+.msg .meta{font-size:12px;opacity:0.8;margin-bottom:6px}
+.role-badge{margin-left:8px;padding:2px 6px;border-radius:6px;font-size:12px}
+.role-owner{background:linear-gradient(90deg,#ffd700,#ff8c00);color:#000}
+.role-admin{background:#00aaff;color:#fff}
+.role-moderator{background:#ffcc00;color:#000}
+.role-vip{background:#ff66d9;color:#000}
+.role-member{background:#0f0;color:#000}
+.role-muted{background:#aaa;color:#000}
+.role-banned{background:#ff4444;color:#fff}
+.msg.admin{background:rgba(255,0,0,0.06);border-left:3px solid #ff4444}
+.msg.user{background:rgba(0,255,157,0.04);border-left:3px solid #00ff9d}
+.msg.own{align-self:flex-end;background:rgba(0,200,0,0.06)}
+.del-btn{margin-left:8px;padding:4px 8px;background:#ff4444;border:none;color:#fff;border-radius:6px;cursor:pointer;font-size:12px}
+.online-list{margin-top:12px}
+.online-list ul{list-style:none;padding-left:0}
+.online-list li{padding:6px 4px;border-bottom:1px solid rgba(0,255,157,0.06)}
